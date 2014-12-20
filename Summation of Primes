@@ -1,0 +1,27 @@
+/*The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+
+Find the sum of all the primes below two million.*/
+
+function sumOfPrimes(num){
+   var total=0;
+   for(var i=2; i<num; i++){
+        if(isPrime(i)===true){
+            total+=i;
+        }
+    }
+    return total;
+}
+
+function isPrime(number){
+    for(var i=2; i<number; i++){
+        if(number%i===0){
+            return false;
+        }
+    }
+    return true;
+}
+
+sumOfPrimes(200000);
+/*two hundred thousand returns 1709600813...I'm
+not sure how to get the answer for 2 million without causing 
+the program to stop due to extended processing.*/
