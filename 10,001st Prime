@@ -1,0 +1,33 @@
+/*By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
+
+What is the 10 001st prime number?*/
+
+//The function below works, but I'm sure there is a faster way to go about it...
+function tenthousandFirstPrime(){
+    var count=0;
+    var i=2
+    var currentPrime;
+    while(count<10001){
+        if(primeTest(i)===true){
+            currentPrime=i;
+            count++;
+        }
+        i++;
+    }
+return currentPrime;
+}
+
+function primeTest(num){
+    for(var i=num-1; i>0; i--){
+        if(i===1){
+            return true;
+        }
+        else if(num%i===0){
+            return false;
+        }
+    }
+}
+    
+    
+    tenthousandFirstPrime();
+    //returns 104743
