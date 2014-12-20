@@ -1,0 +1,17 @@
+//Add all the even fibonacci numbers below and including the number given.
+
+function evenFibs(num){
+    var total=0;
+    var previous =1;
+    var twoPrevious =0;
+    for(var i=1; i<=num; i=(previous+twoPrevious)){
+        if(i%2===0){
+            total+=i;
+        }
+        twoPrevious =previous;
+        previous =i;
+    }
+    return total;
+}
+evenFibs(144);
+//188
